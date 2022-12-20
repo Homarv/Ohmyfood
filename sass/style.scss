@@ -1,0 +1,277 @@
+@import "animation.scss";
+@import "menu.scss";
+@import "responsive.scss";
+
+*{
+    margin:0;
+}
+
+header{
+    text-align: center;
+  }
+
+main{
+    margin: 20px;
+}
+
+h1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+body{
+    @extend %text-police;
+}
+
+p{
+    font-weight: 100;
+}
+
+// EXTEND, THEME ///
+    // police 
+%text-police{
+    font-family: 'Roboto', sans-serif;
+}
+
+%logo-police{
+    font-family: 'Shrikhand';
+}
+
+    //color 
+%primary{
+    background-color: #9356DC;
+}
+
+%secondary{
+    background-color: #FF79DA;
+}
+
+%third{
+    background-color:#99E2D0;
+}
+    //border
+%border-box{
+    border-radius: 20px;
+}
+
+%border-top{
+    border-radius: 20px 20px 0 0;
+}
+%shadow{
+    box-shadow : -2px 10px 25px -5px rgba(0,0,0,0.55); 
+}
+
+
+//PRESENTATION
+
+.logo{
+    padding: 20px;
+}
+
+#site-search{
+    margin-left: 10px;
+    border:hidden;
+}
+
+
+//BUTTON
+
+
+.btn{
+    border-radius: 20px;
+    border: 1px;
+}
+
+
+.btn-purple{
+    @extend .btn;
+    @extend %primary;
+    margin: 20px;
+    padding: 15px;
+    color:white;
+
+    &:hover{
+        background-color: #a567f1;
+    }
+}
+
+.btn-menu{
+    @extend %shadow;
+    background-color: white;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    p{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+.functioning{
+    @extend .btn-menu;
+    display: flex;
+    align-items: center;
+    padding-block-start: 2em;
+    padding-block-end: 2em;
+    position: relative;
+}
+
+//SEARCH
+
+.search-box{
+    display: flex;
+    justify-content: center;
+}
+
+//PRESENTATION
+
+.presentation{
+    text-align: center;
+    margin: 30px;
+}
+
+//FUNTIONNING
+
+.functioning-list{
+    p {
+        color: white;
+    }  
+}
+
+.box-circle{
+    @extend %primary;
+    position: absolute;
+    left: -15px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-functioning{
+    //background-color: red;
+    margin: 20px 10px ;
+    max-width: 600px;
+    i {
+        margin: 10px;
+    }
+}
+.functioning-description{
+    display: flex;
+    margin-left:20px;
+}
+
+//RESTAURANT 
+
+        //card 
+
+.card{
+    @extend %border-box;
+    @extend %shadow;
+    max-width: 600px;
+    box-sizing: border-box;
+    margin: 20px 0;
+    img{
+       @extend %border-top; 
+       width: 100%;
+    }
+    h4{
+        @extend %third;
+        padding: 10px;
+        color:#176f2b;
+    }
+}
+
+.box-image{
+  position: relative;
+}
+
+.box-new{
+    position:absolute; 
+    right: 5%;
+    top: 5%;
+}
+
+.restaurants-name{
+    display: flex;
+}
+
+        //description
+
+
+.card-description{
+    padding: 20px;
+    h2{
+        margin: 0;
+    }
+}
+
+.restaurants-name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1{
+        @extend %logo-police;
+    }
+}
+
+
+//FOOTER
+
+footer{
+    background-color: rgb(50, 49, 49);
+    color: white;
+    padding: 10px;
+}
+
+.logo-footer{
+  @extend %logo-police; 
+  font-size: 20px;  
+  margin-bottom: 16px; 
+}
+
+.link-footer{
+    display: flex;
+    .fa-utensils{
+        margin-right: 15px;
+    } 
+    .fa-handshake-angle{
+        margin-right: 10px;
+    }
+}
+
+
+
+///Media queries large//
+/// 
+
+
+@media #{$medium-up}{
+    
+}
+
+@media #{$large-up}{
+    .functioning-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+ }
+    .box-functioning{
+        width: 100%;
+    }
+   
+    .restaurants-card{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 45%;
+    }
+}
+

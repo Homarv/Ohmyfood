@@ -1,0 +1,92 @@
+///BTN Animation //// 
+/// 
+
+.btn-animation-1{
+    transition: transform;
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity:1;
+        transform: translateY(0px);
+
+    }
+}
+
+@for $i from 1 through 3 {
+    .btn-animation-#{$i}{
+        animation: fadein 2s $i*0.3s ;
+    }
+}
+
+//// BTN ANimation hover ///
+///
+
+.check-box{
+    @extend %third; 
+    display:flex;
+    width: 20%;
+    left: 20%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 20px 20px 0px;
+    display: none;
+}
+
+.btn-menu:hover{
+    .check-box{
+        animation:leftandrotate 0.5s;
+        display: flex;
+        animation-fill-mode: both;
+        border: 2px ;
+    }
+    .fa-circle-check{
+        animation: rotation-icon 0.5s;
+        animation-fill-mode: forwards;
+        color: white;
+    }
+    .menu-description{
+        width: 70%;
+    }
+}
+
+
+/// boucle for left and rotate 
+
+// $pourcent=100;
+// @for $pourcent from 100 through 0 {
+//  .leftandrotate-#{$pourcent}{
+//       $pourcent: $pourcent-10; 
+//       transform: translateX($pourcent);
+//       clip-path: inset(0px 70px 0px 0px round 0px 20px 20px 0px);
+//  }
+//} 
+
+
+@keyframes leftandrotate {
+    from {
+        transform: translateX(0%);
+        clip-path: inset(0px 100% 0px 0px round 0px 20px 20px 0px);
+    }
+    to {
+        transform: translateX(-100%);
+        clip-path: inset(0px 0px 0px 0px round 0px 20px 20px 0px);
+    }
+}
+
+
+
+@keyframes rotation-icon {
+    from{
+       transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
