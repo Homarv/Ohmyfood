@@ -1,9 +1,24 @@
-///BTN Animation //// 
-/// 
 
-.btn-animation-1{
-    transition: transform;
-    animation: fadein 2s;
+////Keyframe
+
+@keyframes leftandrotate {
+    from {
+        transform: translateX(0%);
+        clip-path: inset(0px 100% 0px 0px round 0px 20px 20px 0px);
+    }
+    to {
+        transform: translateX(-100%);
+        clip-path: inset(0px 0px 0px 0px round 0px 20px 20px 0px);
+    }
+}
+
+@keyframes rotation-icon {
+    from{
+       transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes fadein {
@@ -16,6 +31,14 @@
         transform: translateY(0px);
 
     }
+}
+
+///BTN Animation //// 
+/// 
+
+.btn-animation-1{
+    transition: transform;
+    animation: fadein 2s;
 }
 
 @for $i from 1 through 3 {
@@ -53,40 +76,5 @@
     }
     .menu-description{
         width: 70%;
-    }
-}
-
-
-/// boucle for left and rotate 
-
-// $pourcent=100;
-// @for $pourcent from 100 through 0 {
-//  .leftandrotate-#{$pourcent}{
-//       $pourcent: $pourcent-10; 
-//       transform: translateX($pourcent);
-//       clip-path: inset(0px 70px 0px 0px round 0px 20px 20px 0px);
-//  }
-//} 
-
-
-@keyframes leftandrotate {
-    from {
-        transform: translateX(0%);
-        clip-path: inset(0px 100% 0px 0px round 0px 20px 20px 0px);
-    }
-    to {
-        transform: translateX(-100%);
-        clip-path: inset(0px 0px 0px 0px round 0px 20px 20px 0px);
-    }
-}
-
-
-
-@keyframes rotation-icon {
-    from{
-       transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
     }
 }

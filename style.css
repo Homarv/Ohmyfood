@@ -1,8 +1,49 @@
-.btn-animation-1 {
-  transition: transform;
-  animation: fadein 2s;
+body {
+  font-family: "Roboto", sans-serif;
 }
 
+.restaurants-name h1, .logo-footer {
+  font-family: "Shrikhand";
+}
+
+.box-circle {
+  background-color: #9356DC;
+}
+
+.card h4, .bar-title-menu, .check-box {
+  background-color: #99E2D0;
+}
+
+.card {
+  border-radius: 20px;
+}
+
+.card img {
+  border-radius: 20px 20px 0 0;
+}
+
+.card, .btn-menu, .functioning {
+  box-shadow: -2px 10px 25px -5px rgba(0, 0, 0, 0.55);
+}
+
+@keyframes leftandrotate {
+  from {
+    transform: translateX(0%);
+    clip-path: inset(0px 100% 0px 0px round 0px 20px 20px 0px);
+  }
+  to {
+    transform: translateX(-100%);
+    clip-path: inset(0px 0px 0px 0px round 0px 20px 20px 0px);
+  }
+}
+@keyframes rotation-icon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @keyframes fadein {
   from {
     opacity: 0;
@@ -13,6 +54,11 @@
     transform: translateY(0px);
   }
 }
+.btn-animation-1 {
+  transition: transform;
+  animation: fadein 2s;
+}
+
 .btn-animation-1 {
   animation: fadein 2s 0.3s;
 }
@@ -51,24 +97,6 @@
   width: 70%;
 }
 
-@keyframes leftandrotate {
-  from {
-    transform: translateX(0%);
-    clip-path: inset(0px 100% 0px 0px round 0px 20px 20px 0px);
-  }
-  to {
-    transform: translateX(-100%);
-    clip-path: inset(0px 0px 0px 0px round 0px 20px 20px 0px);
-  }
-}
-@keyframes rotation-icon {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .arrow-and-logo {
   display: flex;
   align-items: center;
@@ -132,6 +160,122 @@
     padding-left: 20%;
   }
 }
+.main-index {
+  animation: blurIn, fadeIn;
+  animation-duration: 5s;
+}
+
+.box-load-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.load-spinner {
+  animation: scale-up, fadeIn;
+  animation-duration: 3s, 1s;
+  animation-fill-mode: forwards;
+  display: flex;
+}
+
+#load-spinner-1 {
+  animation: scale-up-center 2s 0.3s;
+  font-size: 50px;
+  margin: 15px;
+}
+
+#load-spinner-2 {
+  animation: scale-up-center 2s 0.6s;
+  font-size: 50px;
+  margin: 15px;
+}
+
+#load-spinner-3 {
+  animation: scale-up-center 2s 0.9s;
+  font-size: 50px;
+  margin: 15px;
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+  75% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+}
+@keyframes scale-up {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blurIn {
+  0% {
+    filter: blur(8px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+footer {
+  background-color: rgb(50, 49, 49);
+  color: white;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.logo-footer {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.link-footer {
+  display: flex;
+}
+.link-footer .fa-utensils {
+  margin-right: 15px;
+}
+.link-footer .fa-handshake-angle {
+  margin-right: 10px;
+}
+
 * {
   margin: 0;
 }
@@ -155,34 +299,6 @@ p {
 
 a {
   text-decoration: none;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-}
-
-.logo-footer, .restaurants-name h1 {
-  font-family: "Shrikhand";
-}
-
-.box-circle {
-  background-color: #9356DC;
-}
-
-.card h4, .check-box, .bar-title-menu {
-  background-color: #99E2D0;
-}
-
-.card {
-  border-radius: 20px;
-}
-
-.card img {
-  border-radius: 20px 20px 0 0;
-}
-
-.card, .btn-menu, .functioning {
-  box-shadow: -2px 10px 25px -5px rgba(0, 0, 0, 0.55);
 }
 
 .logo {
@@ -285,6 +401,34 @@ body {
   color: #176f2b;
 }
 
+.restaurants-name {
+  display: flex;
+  position: relative;
+}
+
+.fa-heart {
+  position: absolute;
+  right: 10px;
+  font-size: 25px;
+  opacity: 0;
+}
+.fa-heart:hover {
+  animation: fadeIn 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.heart-solid {
+  color: transparent;
+  background: linear-gradient(176deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 58%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.heart-regular {
+  opacity: 1;
+  color: black;
+}
+
 .box-image {
   position: relative;
 }
@@ -293,10 +437,6 @@ body {
   position: absolute;
   right: 5%;
   top: 5%;
-}
-
-.restaurants-name {
-  display: flex;
 }
 
 .card-description {
@@ -311,34 +451,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-footer {
-  background-color: rgb(50, 49, 49);
-  color: white;
-  padding: 10px;
-  margin-top: 50px;
-}
-
-.logo-footer {
-  font-size: 20px;
-  margin-bottom: 16px;
-}
-
-.link-footer {
-  display: flex;
-}
-.link-footer .fa-utensils {
-  margin-right: 15px;
-}
-.link-footer .fa-handshake-angle {
-  margin-right: 10px;
-}
-
 @media only screen and (min-width:912px) {
-  .functioning-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   .box-functioning {
     width: 100%;
   }

@@ -1,0 +1,43 @@
+// EXTEND, THEME ///
+
+    // police 
+    
+    %text-police{
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    %logo-police{
+        font-family: 'Shrikhand';
+    }
+    
+        //color 
+
+    %primary{
+        background-color: #9356DC;
+    }
+    
+    %primary-color{
+        color: #9356DC;
+    }
+    
+    %secondary{
+        background-color: #FF79DA;
+    }
+    
+    %third{
+        background-color:#99E2D0;
+    }
+        //border
+
+    %border-box{
+        border-radius: 20px;
+    }
+    
+    %border-top{
+        border-radius: 20px 20px 0 0;
+    }
+    %shadow{
+        box-shadow : -2px 10px 25px -5px rgba(0,0,0,0.55); 
+    }
+    
+    

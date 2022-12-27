@@ -1,0 +1,22 @@
+footer{
+    background-color: rgb(50, 49, 49);
+    color: white;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.logo-footer{
+  @extend %logo-police; 
+  font-size: 20px;  
+  margin-bottom: 16px; 
+}
+
+.link-footer{
+    display: flex;
+    .fa-utensils{
+        margin-right: 15px;
+    } 
+    .fa-handshake-angle{
+        margin-right: 10px;
+    }
+}

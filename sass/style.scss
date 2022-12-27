@@ -1,6 +1,10 @@
+@import "extend.scss";
 @import "animation.scss";
 @import "menu.scss";
 @import "responsive.scss";
+@import "loadingspiner.scss";
+@import "footer.scss";
+
 
 *{
     margin:0;
@@ -21,6 +25,7 @@ h1{
 
 body{
     @extend %text-police;
+    // filter: blur(2px);
 }
 
 p{
@@ -30,41 +35,6 @@ p{
 a{
     text-decoration: none;
 }
-
-// EXTEND, THEME ///
-    // police 
-%text-police{
-    font-family: 'Roboto', sans-serif;
-}
-
-%logo-police{
-    font-family: 'Shrikhand';
-}
-
-    //color 
-%primary{
-    background-color: #9356DC;
-}
-
-%secondary{
-    background-color: #FF79DA;
-}
-
-%third{
-    background-color:#99E2D0;
-}
-    //border
-%border-box{
-    border-radius: 20px;
-}
-
-%border-top{
-    border-radius: 20px 20px 0 0;
-}
-%shadow{
-    box-shadow : -2px 10px 25px -5px rgba(0,0,0,0.55); 
-}
-
 
 //PRESENTATION
 
@@ -195,6 +165,36 @@ a{
     }
 }
 
+.restaurants-name{
+    display: flex;
+    position: relative;
+}
+           ////heart-card
+           
+.fa-heart{
+        position: absolute;
+        right: 10px;
+        font-size: 25px;
+        opacity: 0;
+    &:hover{
+        animation: fadeIn 0.5s;
+        animation-fill-mode: forwards;
+}
+
+}
+.heart-solid{
+    color: transparent;
+    background: linear-gradient(176deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 58%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.heart-regular{
+    opacity: 1;
+    color:black;
+}
+
+         ////image 
 .box-image{
   position: relative;
 }
@@ -203,10 +203,6 @@ a{
     position:absolute; 
     right: 5%;
     top: 5%;
-}
-
-.restaurants-name{
-    display: flex;
 }
 
         //description
@@ -229,33 +225,6 @@ a{
 }
 
 
-//FOOTER
-
-footer{
-    background-color: rgb(50, 49, 49);
-    color: white;
-    padding: 10px;
-    margin-top: 50px;
-}
-
-.logo-footer{
-  @extend %logo-police; 
-  font-size: 20px;  
-  margin-bottom: 16px; 
-}
-
-.link-footer{
-    display: flex;
-    .fa-utensils{
-        margin-right: 15px;
-    } 
-    .fa-handshake-angle{
-        margin-right: 10px;
-    }
-}
-
-
-
 ///Media queries large//
 /// 
 
@@ -265,11 +234,6 @@ footer{
 }
 
 @media #{$large-up}{
-    .functioning-list{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
- }
     .box-functioning{
         width: 100%;
     }
@@ -283,4 +247,5 @@ footer{
         width: 45%;
     }
 }
-
+/////
+/// 
