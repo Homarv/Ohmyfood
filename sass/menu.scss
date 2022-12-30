@@ -35,7 +35,7 @@
     width: 90%;
 }
 
-.price{
+.description-price-box{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,7 +52,11 @@
     font-size: 25px;
 }
 
-///Media queries large//
+.price{
+    width: 20%;
+}
+
+///Media queries medium//
 /// 
 
 
@@ -62,6 +66,8 @@
         padding-left: 10%;
     }
 }
+///Media queries large//
+/// 
 
 @media #{$large-up}{
     main{
@@ -71,3 +77,12 @@
 }
 
 
+///Media queries extra-large//
+/// 
+
+@media #{$extra-large-up}{
+    main{
+        padding-right: 30%;
+        padding-left: 30%;
+    }
+}

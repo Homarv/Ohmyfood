@@ -36,6 +36,14 @@ body {
     clip-path: inset(0px 0px 0px 0px round 0px 20px 20px 0px);
   }
 }
+@keyframes translateleft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 @keyframes rotation-icon {
   from {
     transform: rotate(0deg);
@@ -96,6 +104,11 @@ body {
 .btn-menu:hover .menu-description, .functioning:hover .menu-description {
   width: 70%;
 }
+.btn-menu:hover .price, .functioning:hover .price {
+  animation: leftandrotate 0.5s;
+  background-color: aqua;
+  animation-fill-mode: forwards;
+}
 
 .arrow-and-logo {
   display: flex;
@@ -131,7 +144,7 @@ body {
   width: 90%;
 }
 
-.price {
+.description-price-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -148,6 +161,10 @@ body {
   font-size: 25px;
 }
 
+.price {
+  width: 20%;
+}
+
 @media only screen and (min-width:460px) {
   main {
     padding-right: 10%;
@@ -160,7 +177,13 @@ body {
     padding-left: 20%;
   }
 }
-.main-index {
+@media only screen and (min-width:912px) {
+  main {
+    padding-right: 30%;
+    padding-left: 30%;
+  }
+}
+header, main, footer, .search-box, .presentation {
   animation: blurIn, fadeIn;
   animation-duration: 5s;
 }
