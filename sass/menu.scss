@@ -1,12 +1,14 @@
 @import "responsive.scss";
 
-.arrow-and-logo{
+.header-menu{
     display:flex;
-    align-items: center;
     justify-content: center;
-    .fa-arrow-left{
-        font-size: 30px;
+    align-items: center;
+    a{
+        position: absolute;
+        left: 20px;
         color: black;
+        font-size: 30px;
     }
 }
 
@@ -19,26 +21,12 @@
 .title-menu{
     text-transform: uppercase;
     margin-top: 25px;
-}
-
-.bar-title-menu{
-    @extend %third; 
-    height: 5px;
-    width: 50px;
-    margin-top: 10px;
-}
-
-.menu-description{
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-}
-
-.description-price-box{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    &__bar{
+        @extend %third; 
+        height: 5px;
+        width: 50px;
+        margin-top: 10px;
+    }
 }
 
 .command-box{
@@ -48,12 +36,59 @@
     }
 }
 
-.fa-circle-check{
-    font-size: 25px;
+//// BTN Animation hover, left and rotate///
+///
+.menu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    &__description{
+        padding: 15px;
+        width: 100%;
+        overflow: hidden;
+        p{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+        }
+    } 
+    &__price-box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
-.price{
-    width: 20%;
+.check-box{
+    @extend %third; 
+    display:flex;
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 20px 20px 0px;
+    height: 100%;
+    margin-right: -70px;
+    .fa-circle-check{
+        font-size: 25px;
+    }
+}
+
+.btn-menu:hover{
+    .check-box{
+        display: flex;
+        animation-fill-mode: forwards;
+        border: 2px;
+        margin-right:0 ;
+        transition: all 0.5s;
+    }
+    .fa-circle-check{
+        animation: rotation-icon 0.5s;
+        animation-fill-mode: forwards;
+        color: white;
+    }
+
 }
 
 ///Media queries medium//
@@ -65,6 +100,9 @@
         padding-right: 10%;
         padding-left: 10%;
     }
+    .banner{
+        height: 300px;
+    }
 }
 ///Media queries large//
 /// 
@@ -74,6 +112,9 @@
         padding-right: 20%;
         padding-left: 20%;
     }
+    .banner{
+        height: 300px;
+    }
 }
 
 
@@ -82,7 +123,10 @@
 
 @media #{$extra-large-up}{
     main{
-        padding-right: 30%;
-        padding-left: 30%;
+        padding-right: 20%;
+        padding-left: 20%;
+    }
+    .banner{
+        height: 350px;
     }
 }

@@ -10,7 +10,7 @@ body {
   background-color: #9356DC;
 }
 
-.card h4, .bar-title-menu, .check-box {
+.card h4, .check-box, .title-menu__bar {
   background-color: #99E2D0;
 }
 
@@ -26,22 +26,12 @@ body {
   box-shadow: -2px 10px 25px -5px rgba(0, 0, 0, 0.55);
 }
 
-@keyframes leftandrotate {
-  from {
-    transform: translateX(0%);
-    clip-path: inset(0px 100% 0px 0px round 0px 20px 20px 0px);
-  }
-  to {
-    transform: translateX(-100%);
-    clip-path: inset(0px 0px 0px 0px round 0px 20px 20px 0px);
-  }
-}
 @keyframes translateleft {
   from {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-70px);
   }
 }
 @keyframes rotation-icon {
@@ -63,11 +53,6 @@ body {
   }
 }
 .btn-animation-1 {
-  transition: transform;
-  animation: fadein 2s;
-}
-
-.btn-animation-1 {
   animation: fadein 2s 0.3s;
 }
 
@@ -79,45 +64,16 @@ body {
   animation: fadein 2s 0.9s;
 }
 
-.check-box {
+.header-menu {
   display: flex;
-  width: 20%;
-  left: 20%;
-  position: relative;
   justify-content: center;
   align-items: center;
-  border-radius: 0px 20px 20px 0px;
-  display: none;
 }
-
-.btn-menu:hover .check-box, .functioning:hover .check-box {
-  animation: leftandrotate 0.5s;
-  display: flex;
-  animation-fill-mode: both;
-  border: 2px;
-}
-.btn-menu:hover .fa-circle-check, .functioning:hover .fa-circle-check {
-  animation: rotation-icon 0.5s;
-  animation-fill-mode: forwards;
-  color: white;
-}
-.btn-menu:hover .menu-description, .functioning:hover .menu-description {
-  width: 70%;
-}
-.btn-menu:hover .price, .functioning:hover .price {
-  animation: leftandrotate 0.5s;
-  background-color: aqua;
-  animation-fill-mode: forwards;
-}
-
-.arrow-and-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.arrow-and-logo .fa-arrow-left {
-  font-size: 30px;
+.header-menu a {
+  position: absolute;
+  left: 20px;
   color: black;
+  font-size: 30px;
 }
 
 .banner {
@@ -130,24 +86,10 @@ body {
   text-transform: uppercase;
   margin-top: 25px;
 }
-
-.bar-title-menu {
+.title-menu__bar {
   height: 5px;
   width: 50px;
   margin-top: 10px;
-}
-
-.menu-description {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-}
-
-.description-price-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .command-box {
@@ -157,12 +99,53 @@ body {
   width: 150px;
 }
 
-.fa-circle-check {
+.menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+}
+.menu__description {
+  padding: 15px;
+  width: 100%;
+  overflow: hidden;
+}
+.menu__description p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+.menu__price-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.check-box {
+  display: flex;
+  width: 70px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 20px 20px 0px;
+  height: 100%;
+  margin-right: -70px;
+}
+.check-box .fa-circle-check {
   font-size: 25px;
 }
 
-.price {
-  width: 20%;
+.btn-menu:hover .check-box, .functioning:hover .check-box {
+  display: flex;
+  animation-fill-mode: forwards;
+  border: 2px;
+  margin-right: 0;
+  transition: all 0.5s;
+}
+.btn-menu:hover .fa-circle-check, .functioning:hover .fa-circle-check {
+  animation: rotation-icon 0.5s;
+  animation-fill-mode: forwards;
+  color: white;
 }
 
 @media only screen and (min-width:460px) {
@@ -170,17 +153,26 @@ body {
     padding-right: 10%;
     padding-left: 10%;
   }
+  .banner {
+    height: 300px;
+  }
 }
 @media only screen and (min-width:912px) {
   main {
     padding-right: 20%;
     padding-left: 20%;
   }
+  .banner {
+    height: 300px;
+  }
 }
 @media only screen and (min-width:912px) {
   main {
-    padding-right: 30%;
-    padding-left: 30%;
+    padding-right: 20%;
+    padding-left: 20%;
+  }
+  .banner {
+    height: 350px;
   }
 }
 header, main, footer, .search-box, .presentation {
@@ -355,11 +347,6 @@ a {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
-}
-.btn-menu p, .functioning p {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 .functioning {
