@@ -1,9 +1,9 @@
 @import "extend.scss";
 @import "animation.scss";
+@import "footer.scss";
 @import "menu.scss";
 @import "responsive.scss";
 @import "loadingspiner.scss";
-@import "footer.scss";
 
 
 *{
@@ -25,7 +25,6 @@ h1{
 
 body{
     @extend %text-police;
-    // filter: blur(2px);
 }
 
 p{
@@ -59,13 +58,16 @@ a{
 
 .btn-purple{
     @extend .btn;
+    @extend %shadow;
     background: rgb(147,86,220);
     background: linear-gradient(349deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
     margin: 20px;
     padding: 15px;
     color:white;
     &:hover{
-        background-color: #a567f1;
+        background: rgb(165, 110, 233);
+        background: linear-gradient(349deg, rgb(165, 110, 233)0%, rgb(248, 149, 220) 100%);
+        @extend %shadow-dark;
     }
 }
 
@@ -78,7 +80,7 @@ a{
     justify-content: space-between;
 }
 
-.functioning{
+.btn-functioning{
     @extend .btn-menu;
     display: flex;
     align-items: center;
@@ -109,29 +111,31 @@ a{
     }  
 }
 
-.box-circle{
-    @extend %primary;
-    position: absolute;
-    left: -15px;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.box-functioning{
-    //background-color: red;
+.functioning{
     margin: 20px 10px ;
     max-width: 600px;
     i {
         margin: 10px;
     }
-}
-.functioning-description{
-    display: flex;
-    margin-left:20px;
+    &__box-circle{
+        @extend %primary;
+        position: absolute;
+        left: -15px;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__btn{
+        @extend .btn;
+        @extend .btn-functioning;
+    }
+    &__description{
+        display: flex;
+        margin-left:20px;
+    }
 }
 
 //RESTAURANT 
@@ -144,6 +148,14 @@ a{
     max-width: 600px;
     box-sizing: border-box;
     margin: 20px 0;
+    &__box-image{
+        position: relative;
+    }
+    &__box-new{
+    position:absolute; 
+    right: 5%;
+    top: 5%;
+    }
     img{
        @extend %border-top; 
        width: 100%;
@@ -156,17 +168,27 @@ a{
         padding: 10px;
         color:#176f2b;
     }
+    &__description{
+        padding: 20px;
+        h2{
+            margin: 0;
+        }
+    }
+    &__restaurants-name{
+        display: flex;
+        position: relative;
+        h1{
+            @extend %logo-police;
+        }
+    }
 }
 
-.restaurants-name{
-    display: flex;
-    position: relative;
-}
+
            ////heart
            
 .fa-heart{
         position: absolute;
-        right: 10px;
+        right: 5%;
         font-size: 25px;
         opacity: 0;
     &:hover{
@@ -187,36 +209,6 @@ a{
     color:black;
 }
 
-         ////image 
-.box-image{
-  position: relative;
-}
-
-.box-new{
-    position:absolute; 
-    right: 5%;
-    top: 5%;
-}
-
-        //description
-
-
-.card-description{
-    padding: 20px;
-    h2{
-        margin: 0;
-    }
-}
-
-.restaurants-name{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    h1{
-        @extend %logo-police;
-    }
-}
-
 
 ///Media queries large//
 /// 
@@ -227,10 +219,6 @@ a{
 }
 
 @media #{$large-up}{
-    .box-functioning{
-        width: 100%;
-    }
-   
     .restaurants-card{
         display: flex;
         justify-content: space-between;
@@ -238,6 +226,16 @@ a{
     }
     .card{
         width: 45%;
+    }
+}
+
+@media #{$extra-large-up}{
+    .functioning-list{
+        display: flex;
+        justify-content: space-between;
+    }
+    .functioning{
+        width: 30%;
     }
 }
 

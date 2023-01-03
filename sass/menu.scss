@@ -29,9 +29,10 @@
     }
 }
 
-.command-box{
+.command{
     text-align: center;
-    button{
+    &__btn{
+        @extend .btn-purple;
         width: 150px;
     }
 }

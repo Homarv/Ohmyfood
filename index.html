@@ -21,82 +21,104 @@
         </div>
     </section>
 
-    <header>
-        <img class="logo" src="images/logo/ohmyfood@2x.svg" alt=""/>
-    </header>
+    <div class="blur-selector">
+        <header>
+            <img class="logo" src="images/logo/ohmyfood@2x.svg" alt=""/>
+        </header>
 
-	<section class="search-box">
-				<div class="point">
-					<i class="fa-solid fa-location-dot fa-lg"></i>
-				</div>
-		<input type="search" id="site-search" name="q" placeholder= "Paris,Belleville">
-	</section>
-
-    <section class="presentation">
-        <h1>Réserver le menu qui vous convient</h1>
-        <p>Découvrer des restaurants d'exceptions, sélectionnés par nos soins</p>
-        <button class="btn-purple">Explorer nos restaurants</button>
-    </section>
-
-    <main class="main-index">
-
-        <section class="box-functionings">
-            <h2>Fonctionnement</h2>
-
-            <div class="functioning-list">
-                    <div class="box-functioning">
-                        <button class="btn functioning">
-                            <div class="box-circle">
-                                <p>1</p>
-                            </div>
-                            <div class ="functioning-description">
-                                <i class="fa-solid fa-mobile-screen-button fa-xl"></i>
-                                <h3>Choississez un Restaurant</h3>
-                            </div>
-                        </button>
+        <section class="search-box">
+                    <div class="point">
+                        <i class="fa-solid fa-location-dot fa-lg"></i>
                     </div>
-
-                    <div class="box-functioning">
-                        <button class="btn functioning">
-                            <div class="box-circle">
-                                <p>2</p>
-                            </div>
-                            <div class ="functioning-description">
-                                <i class="fa-solid fa-bars fa-xl"></i>
-                                <h3>Composer votre menu</h3>
-                            </div>
-                        </button>
-                    </div>
-
-                    <div class="box-functioning">
-                        <button class="btn functioning">
-                            <div class="box-circle">
-                                <p>3</p>
-                            </div>
-                            <div class ="functioning-description">
-                                <i class="fa-sharp fa-solid fa-store fa-xl"></i>
-                                <h3>Déguster au restaurant</h3>
-                            </div>
-                        </button>
-                    </div>
-            </div>
+            <input type="search" id="site-search" name="q" placeholder= "Paris,Belleville">
         </section>
 
-        <h2>Restaurant</h2>
+        <section class="presentation">
+            <h1>Réserver le menu qui vous convient</h1>
+            <p>Découvrer des restaurants d'exceptions, sélectionnés par nos soins</p>
+            <button class="btn-purple">Explorer nos restaurants</button>
+        </section>
 
-        <section class="restaurants-card">
+        <main class="main-index">
 
-            <article class="card">
-                <a href="AlaFrançaise.html">
-                    <div class="box-image">
-                        <div class="box-new">
+            <section class="box-functionings">
+                <h2>Fonctionnement</h2>
+
+                <div class="functioning-list">
+                        <div class="functioning">
+                            <button class="functioning__btn">
+                                <div class="functioning__box-circle">
+                                    <p>1</p>
+                                </div>
+                                <div class ="functioning__description">
+                                    <i class="fa-solid fa-mobile-screen-button fa-xl"></i>
+                                    <h3>Choississez un Restaurant</h3>
+                                </div>
+                            </button>
+                        </div>
+
+                        <div class="functioning">
+                            <button class="functioning__btn">
+                                <div class="functioning__box-circle">
+                                    <p>2</p>
+                                </div>
+                                <div class ="functioning__description">
+                                    <i class="fa-solid fa-bars fa-xl"></i>
+                                    <h3>Composer votre menu</h3>
+                                </div>
+                            </button>
+                        </div>
+
+                        <div class="functioning">
+                            <button class="functioning__btn">
+                                <div class="functioning__box-circle">
+                                    <p>3</p>
+                                </div>
+                                <div class ="functioning__description">
+                                    <i class="fa-sharp fa-solid fa-store fa-xl"></i>
+                                    <h3>Déguster au restaurant</h3>
+                                </div>
+                            </button>
+                        </div>
+                </div>
+            </section>
+
+            <h2>Restaurant</h2>
+
+            <section class="restaurants-card">
+
+                <article class="card">
+                    <a href="AlaFrançaise.html">
+                        <div class="card__box-image">
+                            <div class="card__box-new">
+                                <h4>Nouveau</h4>
+                            </div>
+                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="image-restaurant"></a>
+                        </div>
+
+                        <div class="card__description">
+                            <div class="card__restaurants-name">
+                                <h3>La palette du goût</h3>
+                                <div>
+                                    <i class="fa-regular fa-heart heart-regular"></i>
+                                    <i class="fa-solid fa-heart heart-solid"></i>
+                                </div>
+                            </div>
+                            <p>Ménilmontant</p>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="card">
+                    <div class="card__box-image">
+                        <div class="card__box-new">
                             <h4>Nouveau</h4>
                         </div>
-                        <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="image-restaurant"></a>
+                        <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"></a>
                     </div>
 
-                    <div class="card-description">
-                        <div class="restaurants-name">
+                    <div class="card__description">
+                        <div class="card__restaurants-name">
                             <h3>La palette du goût</h3>
                             <div>
                                 <i class="fa-regular fa-heart heart-regular"></i>
@@ -105,83 +127,64 @@
                         </div>
                         <p>Ménilmontant</p>
                     </div>
-                </a>
-            </article>
-            
-            <article class="card">
-                <div class="box-image">
-                    <div class="box-new">
-                        <h4>Nouveau</h4>
-                    </div>
-                    <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"></a>
-                </div>
+                </article>
 
-                <div class="card-description">
-                    <div class="restaurants-name">
-                        <h3>La palette du goût</h3>
-                        <div>
-                            <i class="fa-regular fa-heart heart-regular"></i>
-                            <i class="fa-solid fa-heart heart-solid"></i>
+                <article class="card">
+                    <div class="card__box-image">
+                        <div class="card__box-new">
+                            <h4>Nouveau</h4>
                         </div>
+                        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"></img>
                     </div>
-                    <p>Ménilmontant</p>
-                </div>
-            </article>
 
-            <article class="card">
-                <div class="box-image">
-                    <div class="box-new">
-                        <h4>Nouveau</h4>
-                    </div>
-                    <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"></img>
-                </div>
-
-                <div class="card-description">
-                    <div class="restaurants-name">
-                        <h3>La palette du goût</h3>
-                        <div>
-                            <i class="fa-regular fa-heart heart-regular"></i>
-                            <i class="fa-solid fa-heart heart-solid"></i>
+                    <div class="card__description">
+                        <div class="card__restaurants-name">
+                            <h3>La palette du goût</h3>
+                            <div>
+                                <i class="fa-regular fa-heart heart-regular"></i>
+                                <i class="fa-solid fa-heart heart-solid"></i>
+                            </div>
                         </div>
+                        <p>Ménilmontant</p>
                     </div>
-                    <p>Ménilmontant</p>
-                </div>
-            </article>
+                </article>
 
-            <article class="card">
-                <div class="box-image">
-                    <div class="box-new">
-                        <h4>Nouveau</h4>
-                    </div>
-                    <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"></img>
-                </div>
-
-                <div class="card-description">
-                    <div class="restaurants-name">
-                        <h3>La palette du goût</h3>
-                        <div>
-                            <i class="fa-regular fa-heart heart-regular"></i>
-                            <i class="fa-solid fa-heart heart-solid"></i>
+                <article class="card">
+                    <div class="card__box-image">
+                        <div class="card__box-new">
+                            <h4>Nouveau</h4>
                         </div>
+                        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"></img>
                     </div>
-                    <p>Ménilmontant</p>
-                </div>
-            </article>
-        </section>
 
-    </main>    
-    <footer>
-        <p class="logo-footer">ohmyfood</p>
-        <div class="link-footer">
-            <i class="fa-solid fa-utensils"></i>
-            <p>Proposer un Restaurant</p>
-        </div>
-        <div class="link-footer">
-            <i class="fa-solid fa-handshake-angle"></i>
-            <p>Devenir partenaire</p>
-        </div>
-        <p>Mentions Légales</p>
-        <p>Contact</p>
-    </footer>
+                    <div class="card__description">
+                        <div class="card__restaurants-name">
+                            <h3>La palette du goût</h3>
+                            <div>
+                                <i class="fa-regular fa-heart heart-regular"></i>
+                                <i class="fa-solid fa-heart heart-solid"></i>
+                            </div>
+                        </div>
+                        <p>Ménilmontant</p>
+                    </div>
+                </article>
+            </section>
+
+        </main>    
+
+        <footer class="footer">
+            <p class="footer__logo">ohmyfood</p>
+            <div class="footer__link">
+                <i class="fa-solid fa-utensils"></i>
+                <p>Proposer un Restaurant</p>
+            </div>
+            <div class="footer__link">
+                <i class="fa-solid fa-handshake-angle"></i>
+                <p>Devenir partenaire</p>
+            </div>
+            <p>Mentions Légales</p>
+                <a href="mailto:contact.ohmyfood@gmail.com">Contact</a>
+        </footer>
+    </div>
 </body>
 </html>
