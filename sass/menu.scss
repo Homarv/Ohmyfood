@@ -65,12 +65,12 @@
 .check-box{
     @extend %third; 
     display:flex;
-    width: 70px;
+    width: 90px;
     justify-content: center;
     align-items: center;
     border-radius: 0px 20px 20px 0px;
     height: 100%;
-    margin-right: -70px;
+    margin-right: -90px;
     .fa-circle-check{
         font-size: 25px;
     }
