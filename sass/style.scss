@@ -187,7 +187,9 @@ a{
            
 .fa-heart{
         position: absolute;
-        right: 5%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        right: 1%;
         font-size: 25px;
         opacity: 0;
     &:hover{

@@ -106,6 +106,12 @@ body {
   font-size: 30px;
 }
 
+.restaurants-name {
+  font-family: "Shrikhand";
+  display: flex;
+  position: relative;
+}
+
 .banner {
   height: 200px;
   width: 100%;
@@ -437,7 +443,9 @@ a {
 }
 .fa-heart {
   position: absolute;
-  right: 5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: 1%;
   font-size: 25px;
   opacity: 0;
 }
