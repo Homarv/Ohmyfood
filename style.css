@@ -10,6 +10,10 @@ body {
   background-color: #9356DC;
 }
 
+.btn-functioning:hover .fa-mobile-screen-button, .functioning__btn:hover .fa-mobile-screen-button, .btn-functioning:hover .fa-bars, .functioning__btn:hover .fa-bars, .btn-functioning:hover .fa-store, .functioning__btn:hover .fa-store {
+  color: #9356DC;
+}
+
 .card h4, .check-box, .title-menu__bar {
   background-color: #99E2D0;
 }
@@ -171,6 +175,12 @@ body {
   font-size: 25px;
 }
 
+.btn-menu .check-box, .btn-functioning .check-box, .functioning__btn .check-box {
+  transition: all 0.5s;
+}
+.btn-menu .fa-circle-check, .btn-functioning .fa-circle-check, .functioning__btn .fa-circle-check {
+  color: white;
+}
 .btn-menu:hover .check-box, .btn-functioning:hover .check-box, .functioning__btn:hover .check-box {
   display: flex;
   animation-fill-mode: forwards;
@@ -181,7 +191,6 @@ body {
 .btn-menu:hover .fa-circle-check, .btn-functioning:hover .fa-circle-check, .functioning__btn:hover .fa-circle-check {
   animation: rotation-icon 0.5s;
   animation-fill-mode: forwards;
-  color: white;
 }
 
 @media only screen and (min-width:460px) {
@@ -371,7 +380,9 @@ a {
   padding-block-end: 2em;
   position: relative;
 }
-
+.btn-functioning:hover, .functioning__btn:hover {
+  background-color: #efe8f8;
+}
 .search-box {
   display: flex;
   justify-content: center;

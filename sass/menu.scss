@@ -82,20 +82,26 @@
     }
 }
 
-.btn-menu:hover{
+.btn-menu{
     .check-box{
-        display: flex;
-        animation-fill-mode: forwards;
-        border: 2px;
-        margin-right:0 ;
         transition: all 0.5s;
     }
     .fa-circle-check{
-        animation: rotation-icon 0.5s;
-        animation-fill-mode: forwards;
         color: white;
     }
-
+    &:hover{
+        .check-box{
+            display: flex;
+            animation-fill-mode: forwards;
+            border: 2px;
+            margin-right:0 ;
+            transition: all 0.5s;
+        }
+        .fa-circle-check{
+            animation: rotation-icon 0.5s;
+            animation-fill-mode: forwards;
+        }
+    }
 }
 
 ///Media queries medium//

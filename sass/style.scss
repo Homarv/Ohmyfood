@@ -87,6 +87,12 @@ a{
     padding-block-start: 2em;
     padding-block-end: 2em;
     position: relative;
+    &:hover{
+        background-color: #efe8f8;;
+        .fa-mobile-screen-button, .fa-bars, .fa-store{
+            @extend %primary-color ;
+        }
+    }
 }
 
 //SEARCH
