@@ -49,15 +49,25 @@ body {
   }
 }
 .btn-animation-1 {
-  animation: fadein 2s 0.3s;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
 .btn-animation-2 {
-  animation: fadein 2s 0.6s;
+  animation-name: fadein;
+  animation-duration: 2s;
+  animation-fill-mode: both;
 }
 
 .btn-animation-3 {
-  animation: fadein 2s 0.9s;
+  animation-name: fadein;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+}
+
+.btn-animation-1, .btn-animation-2, .btn-animation-3 {
+  opacity: 0;
 }
 
 .footer {
