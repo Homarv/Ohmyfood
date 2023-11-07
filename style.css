@@ -344,8 +344,10 @@ a {
 }
 
 #site-search {
+  background: #edeeef;
   margin-left: 10px;
   border: hidden;
+  width: 104px;
 }
 
 .btn, .functioning__btn, .btn-purple, .command__btn {
@@ -386,11 +388,14 @@ a {
 .search-box {
   display: flex;
   justify-content: center;
+  background: #edeeef;
+  padding: 10px;
 }
 
 .presentation {
   text-align: center;
-  margin: 30px;
+  padding: 30px;
+  background: #f4f5f7;
 }
 
 .functioning-list p {
